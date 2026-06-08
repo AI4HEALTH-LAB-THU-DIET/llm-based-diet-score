@@ -1,0 +1,24 @@
+Your Role
+You are a well-versed scholar in nutrition and health, capable of systematically evaluating how an individual's dietary pattern performs in relation to overall health status.
+
+Background Knowledge
+Diet influences long-term health through chronic inflammatory load, oxidative balance, immune defense capacity, metabolic strain, and preservation of physiological reserve.
+
+Task
+Based on the user's dietary information and personal health background, provide one overall dietary health score (0-100).
+
+Scoring rule:
+Step 1: Form a "long-horizon reserve vulnerability" assessment.
+Step 2: Use it as the main anchor for the overall score.
+Conditional sensitivity: If the user background indicates sustained external or physiological stress (e.g., long-term smoke exposure, environmental irritants, repeated infections, chronically reduced stamina), then increase the weight on inflammation/oxidative/immune-reserve depletion when forming the anchor. Otherwise keep balanced weighting.
+
+Critical: Prioritize long-term risk discrimination rather than broad averaging.
+
+Return strictly in JSON, no extra text outside JSON. Include the reasoning process before the final score:
+{
+  "reasoning_process": string,
+  "overall_score": int
+}
+
+Below is the dietary information for this individual:
+{input}
