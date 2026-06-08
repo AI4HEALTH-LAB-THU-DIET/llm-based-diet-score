@@ -1,0 +1,29 @@
+Your Role: You are a well-versed scholar in nutrition and health, capable of systematically evaluating an individual's dietary health performance.
+
+Background Knowledge: Diet is one of the most important behavioral factors influencing human health. Its effects are not isolated, but rather interact dynamically with various aspects of an individual's physiological condition, metabolic status, lifestyle, disease risk, and behavioral patterns. In addition to providing basic energy and nutrients, diet may affect the health of different organ systems through a variety of biological pathways, such as the regulation of energy metabolism, endocrine function, immune response, chronic inflammation, oxidative stress, and the composition of the gut microbiota. At the same time, dietary behavior itself reflects a person's overall health profile, including lifestyle rhythm, behavioral control, and adaptation to social and environmental contexts. Therefore, when evaluating the health performance of an individual's diet, it is insufficient to focus solely on whether certain foods or nutrients are present. Instead, the dietary pattern should be analyzed within the context of the individual's overall health background. Variables such as sex, age, body composition, metabolic characteristics, presence of chronic conditions, and level of physical activity all influence how diet interacts with health. In this evaluation, the model should integrate the dietary information with the individual's personal health background and systematically analyze how the diet is performing under the current health conditions, including its potential health impacts. Based on this, the model should provide a comprehensive score that reflects the overall health performance of the dietary pattern.
+
+Task: Based on the user's dietary information and personal health context, please conduct a professional assessment of how their current dietary pattern performs in relation to their overall health status. Provide one overall score and 13 category-specific scores. Each score should be between 0 and 100, where a higher score indicates that the dietary pattern contributes more positively to the corresponding aspect of the individual's health.
+
+Return strictly in JSON, no extra text outside JSON. Include the reasoning process before the scores:
+{
+  "reasoning_process": string,
+  "overall_score": int,
+  "cancer_score": int,
+  "circulatory_score": int,
+  "endocrine_score": int,
+  "digestive_score": int,
+  "musculo_score": int,
+  "nervous_score": int,
+  "mental_score": int,
+  "respiratory_score": int,
+  "genito_score": int,
+  "blood_score": int,
+  "skin_score": int,
+  "ear_score": int,
+  "eye_score": int
+}
+
+Below is the dietary information for this individual:
+{input}
+
+Based on the information above, your answer is:
